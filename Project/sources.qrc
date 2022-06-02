@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icons"/>
+    <qresource prefix="/">
+        <file>icons/align-center-free-icon-font.png</file>
+        <file>icons/align-left-free-icon-font.png</file>
+        <file>icons/align-right-free-icon-font.png</file>
+        <file>icons/broom-free-icon-font.png</file>
+        <file>icons/duplicate-free-icon-font.png</file>
+        <file>icons/note.png</file>
+        <file>icons/paste.png</file>
+        <file>icons/redo.png</file>
+        <file>icons/scissors-free-icon-font.png</file>
+        <file>icons/text-free-icon-font.png</file>
+        <file>icons/undo-free-icon-font.png</file>
+        <file>icons/fill-free-icon-font.png</file>
+    </qresource>
+</RCC>
