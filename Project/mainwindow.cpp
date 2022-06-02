@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     notesDir.mkpath("notes");
 
     ui->setupUi(this);
-    QFile stylefile("stylesheet.qss");
+    QFile stylefile(":/essential files/stylesheet.qss");
     stylefile.open(QFile::ReadOnly);
     QString style = stylefile.readAll();
     stylefile.close();
@@ -85,19 +85,12 @@ void MainWindow::on_addNew_clicked()
 
 void MainWindow::on_saveNote_clicked()
 {
+    if(!ui->tabWidget->count()){
+        QMessageBox::warning(this,"Error","Choose a note first");
+        return;
+    }
     editNote *currentNote = (editNote*)ui->tabWidget->widget(ui->tabWidget->currentIndex());
-    QString tabName = currentNote->noteTitle;
-    /*if(tabName != ui->tabWidget->tabText(ui->tabWidget->currentIndex())){
-        allNotes.erase(ui->tabWidget->tabText(ui->tabWidget->currentIndex()).toStdString());
-        qDeleteAll(ui->listWidget->selectedItems());
-        ui->listWidget->addItem(tabName);
-
-        QFile file("notes/" + ui->tabWidget->tabText(ui->tabWidget->currentIndex()) + ".txt");
-        file.open(QFile::WriteOnly);
-        file.rename(tabName + ".txt");
-
-        ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), tabName);
-    }*/
+    QString tabName = ui->tabWidget->tabText(ui->tabWidget->currentIndex());
     allNotes[tabName.toStdString()] = currentNote->allParagraph.toStdString();
 
     QFile file("notes/" + tabName + ".txt");
@@ -111,8 +104,11 @@ void MainWindow::on_saveNote_clicked()
 
 void MainWindow::on_deleteNoteBtn_clicked()
 {
-    editNote *currentNote = (editNote*)ui->tabWidget->widget(ui->tabWidget->currentIndex());
-    QString tabName = currentNote->noteTitle;
+    if(!ui->tabWidget->count()){
+        QMessageBox::warning(this,"Error","Choose a note first");
+        return;
+    }
+    QString tabName = ui->tabWidget->tabText(ui->tabWidget->currentIndex());
     QFile file("notes/" + tabName + ".txt");
     file.remove();
     file.close();
@@ -124,15 +120,25 @@ void MainWindow::on_deleteNoteBtn_clicked()
 void MainWindow::on_changeNoteTitleBtn_clicked()
 {
     // change current tab title
+    if(!ui->tabWidget->count()){
+        QMessageBox::warning(this,"Error","Choose a note first");
+        return;
+    }
+    editNote *currentNote = (editNote*)ui->tabWidget->widget(ui->tabWidget->currentIndex());
     QString curTabName = ui->tabWidget->tabText(ui->tabWidget->currentIndex());
     QString newTabName = QInputDialog::getText(this,"change tab title","Enter new title");
+    if(newTabName.isEmpty()){
+        QMessageBox::warning(this,"Error","note can not be with empty title");
+        return;
+    }
     for(auto& letter : newTabName){
         if(!letter.isLetterOrNumber() && letter != ' '){
             QMessageBox::warning(this,"Error","Enter valid tab name\n( only alphabets or digits )");
             return;
         }
     }
-    allNotes.erase(curTabName.toStdString()); //  -------------delete this set at all
+    currentNote->noteTitle = newTabName;
+    allNotes.erase(curTabName.toStdString());
     qDeleteAll(ui->listWidget->selectedItems());
     ui->listWidget->addItem(newTabName);
     QFile::rename("notes/" + curTabName + ".txt", "notes/" + newTabName + ".txt");

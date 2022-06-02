@@ -48,6 +48,10 @@ private slots:
 
     void on_colorBtn_clicked();
 
+    void on_smalizeBtn_clicked();
+
+    void on_capitalizeBtn_clicked();
+
 private:
     Ui::editNote *ui;
 };

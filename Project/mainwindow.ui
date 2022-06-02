@@ -29,12 +29,22 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Notes</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="sources.qrc">
+    <normaloff>:/icons/icon.png</normaloff>:/icons/icon.png</iconset>
   </property>
   <property name="styleSheet">
    <string notr="true">QMainWindow{
 background:rgb(233, 213, 202);border:none;
 }</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>150</width>
+    <height>150</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="enabled">
@@ -51,6 +61,12 @@ background:rgb(233, 213, 202);border:none;
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
        <widget class="QPushButton" name="addNew">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
         <property name="text">
          <string>Add new note</string>
         </property>
@@ -59,31 +75,7 @@ background:rgb(233, 213, 202);border:none;
       <item>
        <widget class="QListWidget" name="listWidget">
         <property name="styleSheet">
-         <string notr="true">QListWidget{
-outline: 0;
-font: 700 12pt &quot;Segoe UI&quot;;
-background:rgb(54, 48, 98);border:none;
-}
-
-QListWidget::item{
-
-background:white;
-height: 40px;
-padding:20px;
-border-bottom: 2px solid rgb(54, 48, 98);
-color:rgb(38, 70, 83);
-}
-
-QListWidget::item::hover{
-background-color:rgb(240, 240, 240);
-color:rgb(38, 70, 83);
-}
-
-QListWidget::ScrollBar::groove {
-    background: red;
-    position: absolute;
-    left: 4px; right: 4px;
-}</string>
+         <string notr="true"/>
         </property>
         <property name="horizontalScrollBarPolicy">
          <enum>Qt::ScrollBarAsNeeded</enum>
@@ -120,7 +112,7 @@ QListWidget::ScrollBar::groove {
        <widget class="QTabWidget" name="tabWidget">
         <property name="minimumSize">
          <size>
-          <width>950</width>
+          <width>1000</width>
           <height>0</height>
          </size>
         </property>
@@ -142,6 +134,9 @@ QListWidget::ScrollBar::groove {
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <widget class="QPushButton" name="saveNote">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="text">
            <string>Save note</string>
           </property>
@@ -149,6 +144,9 @@ QListWidget::ScrollBar::groove {
         </item>
         <item>
          <widget class="QPushButton" name="deleteNoteBtn">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="text">
            <string>Delete note</string>
           </property>
@@ -156,6 +154,9 @@ QListWidget::ScrollBar::groove {
         </item>
         <item>
          <widget class="QPushButton" name="changeNoteTitleBtn">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="text">
            <string>Change title</string>
           </property>
@@ -168,6 +169,8 @@ QListWidget::ScrollBar::groove {
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="sources.qrc"/>
+ </resources>
  <connections/>
 </ui>

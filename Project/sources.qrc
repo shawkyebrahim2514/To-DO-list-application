@@ -13,5 +13,9 @@
         <file>icons/text-free-icon-font.png</file>
         <file>icons/undo-free-icon-font.png</file>
         <file>icons/fill-free-icon-font.png</file>
+        <file>icons/capital.png</file>
+        <file>icons/small.png</file>
+        <file>icons/icon.png</file>
+        <file>essential files/stylesheet.qss</file>
     </qresource>
 </RCC>

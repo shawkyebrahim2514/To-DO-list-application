@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[])
 {
-    QFile stylefile("stylesheet.qss");
+    QFile stylefile(":/essential files/stylesheet.qss");
     stylefile.open(QFile::ReadOnly);
     QString style = stylefile.readAll();
     stylefile.close();

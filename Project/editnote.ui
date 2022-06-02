@@ -23,6 +23,9 @@ margin:0;
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
       <widget class="QPushButton" name="copyBtn">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -42,6 +45,9 @@ margin:0;
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QPushButton" name="pasteBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="styleSheet">
           <string notr="true"/>
          </property>
@@ -62,6 +68,9 @@ margin:0;
        </item>
        <item>
         <widget class="QPushButton" name="cutBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -79,6 +88,9 @@ margin:0;
        </item>
        <item>
         <widget class="QPushButton" name="clearBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -95,13 +107,16 @@ margin:0;
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="undoBtn">
+        <widget class="QPushButton" name="smalizeBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string/>
          </property>
          <property name="icon">
           <iconset resource="sources.qrc">
-           <normaloff>:/icons/undo-free-icon-font.png</normaloff>:/icons/undo-free-icon-font.png</iconset>
+           <normaloff>:/icons/small.png</normaloff>:/icons/small.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -112,13 +127,76 @@ margin:0;
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="redoBtn">
+        <widget class="QPushButton" name="capitalizeBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string/>
          </property>
          <property name="icon">
           <iconset resource="sources.qrc">
-           <normaloff>:/icons/redo.png</normaloff>:/icons/redo.png</iconset>
+           <normaloff>:/icons/capital.png</normaloff>:/icons/capital.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="alignLeftBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="sources.qrc">
+           <normaloff>:/icons/align-left-free-icon-font.png</normaloff>:/icons/align-left-free-icon-font.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="alignCenterBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="sources.qrc">
+           <normaloff>:/icons/align-center-free-icon-font.png</normaloff>:/icons/align-center-free-icon-font.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="alignRightBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="sources.qrc">
+           <normaloff>:/icons/align-right-free-icon-font.png</normaloff>:/icons/align-right-free-icon-font.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -130,6 +208,9 @@ margin:0;
        </item>
        <item>
         <widget class="QPushButton" name="changeFontBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -147,6 +228,9 @@ margin:0;
        </item>
        <item>
         <widget class="QPushButton" name="colorBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string/>
          </property>
@@ -163,13 +247,16 @@ margin:0;
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="alignRightBtn">
+        <widget class="QPushButton" name="undoBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string/>
          </property>
          <property name="icon">
           <iconset resource="sources.qrc">
-           <normaloff>:/icons/align-right-free-icon-font.png</normaloff>:/icons/align-right-free-icon-font.png</iconset>
+           <normaloff>:/icons/undo-free-icon-font.png</normaloff>:/icons/undo-free-icon-font.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -180,30 +267,16 @@ margin:0;
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="alignCenterBtn">
+        <widget class="QPushButton" name="redoBtn">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
          <property name="text">
           <string/>
          </property>
          <property name="icon">
           <iconset resource="sources.qrc">
-           <normaloff>:/icons/align-center-free-icon-font.png</normaloff>:/icons/align-center-free-icon-font.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>30</width>
-           <height>30</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="alignLeftBtn">
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="sources.qrc">
-           <normaloff>:/icons/align-left-free-icon-font.png</normaloff>:/icons/align-left-free-icon-font.png</iconset>
+           <normaloff>:/icons/redo.png</normaloff>:/icons/redo.png</iconset>
          </property>
          <property name="iconSize">
           <size>

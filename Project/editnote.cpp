@@ -103,3 +103,23 @@ void editNote::on_colorBtn_clicked()
 
 }
 
+
+void editNote::on_smalizeBtn_clicked()
+{
+    QTextCursor cursor = ui->noteParagraph->textCursor();
+    if(cursor.hasSelection())
+    {
+        cursor.insertText(cursor.selectedText().toLower());
+    }
+}
+
+
+void editNote::on_capitalizeBtn_clicked()
+{
+    QTextCursor cursor = ui->noteParagraph->textCursor();
+    if(cursor.hasSelection())
+    {
+        cursor.insertText(cursor.selectedText().toUpper());
+    }
+}
+

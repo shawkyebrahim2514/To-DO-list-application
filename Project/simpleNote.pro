@@ -28,3 +28,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     sources.qrc
+
+DISTFILES += \
+    essential files/stylesheet.qss
