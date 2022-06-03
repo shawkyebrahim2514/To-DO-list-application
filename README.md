@@ -1,2 +1,2 @@
-# notepad
- QT GUI notepad with CPP
+# ToDo-List
+ QT GUI todo-list with CPP
