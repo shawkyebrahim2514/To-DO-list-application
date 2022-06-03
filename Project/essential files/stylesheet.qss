@@ -23,6 +23,12 @@ color:rgb(38, 70, 83);
 border-bottom: 2px solid rgb(38, 70, 83);
 }
 
+QListWidget::item::selected{
+	background-color:white;
+	color:rgb(38, 70, 83);
+	border-bottom: 2px solid rgb(38, 70, 83);
+}
+
 QPushButton{
 background:#d3506a;border:none;
 padding:5px;
