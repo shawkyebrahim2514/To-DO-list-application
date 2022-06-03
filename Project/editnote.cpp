@@ -1,23 +1,23 @@
 #include "editnote.h"
 #include "ui_editnote.h"
-editNote::editNote(QString title, QString paragraph, QWidget *parent) :
+editNote::editNote(QString title, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::editNote)
 {
     ui->setupUi(this);
-    ui->noteParagraph->setText(paragraph);
     noteTitle = title;
 }
 
 editNote::~editNote()
 {
     delete ui;
+    ui->noteParagraph->setTextColor(QColor("#d3506a"));
 }
 
 
 void editNote::on_noteParagraph_textChanged()
 {
-    allParagraph = ui->noteParagraph->toHtml();
+    //allParagraph = ui->noteParagraph->toHtml();
 }
 
 
@@ -59,20 +59,11 @@ void editNote::on_redoBtn_clicked()
 
 void editNote::on_changeFontBtn_clicked()
 {
-    bool ok;
-    QFont font = QFontDialog::getFont(&ok,this);
+    bool *ok;
+    QFont font = QFontDialog::getFont(ok,ui->noteParagraph->currentFont(),this);
     if(ok){
         ui->noteParagraph->setCurrentFont(font);
     }else return;
-}
-
-
-void editNote::on_changeColorBtn_clicked()
-{
-    QColor color = QColorDialog::getColor(Qt::white,this, "choose font color");
-    if(color.isValid()){
-        ui->noteParagraph->setTextColor(color);
-    }
 }
 
 
@@ -96,7 +87,7 @@ void editNote::on_alignRightBtn_clicked()
 
 void editNote::on_colorBtn_clicked()
 {
-    QColor color = QColorDialog::getColor("#d3506a",this, "choose font color");
+    QColor color = QColorDialog::getColor(ui->noteParagraph->textColor(),this, "choose font color");
     if(color.isValid()){
         ui->noteParagraph->setTextColor(color);
     }

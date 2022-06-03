@@ -16,9 +16,8 @@ class editNote : public QWidget
     Q_OBJECT
 
 public:
-    QString noteTitle;
-    QString allParagraph;
-    explicit editNote(QString title, QString paragraph, QWidget *parent = nullptr);
+    QString noteTitle = "";
+    explicit editNote(QString title, QWidget *parent = nullptr);
     ~editNote();
 
 private slots:
@@ -38,8 +37,6 @@ private slots:
 
     void on_changeFontBtn_clicked();
 
-    void on_changeColorBtn_clicked();
-
     void on_alignLeftBtn_clicked();
 
     void on_alignCenterBtn_clicked();
@@ -52,7 +49,7 @@ private slots:
 
     void on_capitalizeBtn_clicked();
 
-private:
+public:
     Ui::editNote *ui;
 };
 
