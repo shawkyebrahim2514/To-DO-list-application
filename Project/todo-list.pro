@@ -30,4 +30,7 @@ RESOURCES += \
     sources.qrc
 
 DISTFILES += \
-    essential files/stylesheet.qss
+    essential files/stylesheet.qss \
+    icons/exe icon.ico
+
+RC_FILE = todo-list.rc
