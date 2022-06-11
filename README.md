@@ -1,5 +1,5 @@
-# ToDo-List
- QT GUI todo-list with CPP
+# Notes with text editing
+ QT GUI Notes with CPP
 
 ```
  > All notes is located in the same program direction
@@ -19,4 +19,4 @@
 ![image](https://user-images.githubusercontent.com/101745968/171967585-3360859d-257c-4eb5-aca5-e61b63a0aee6.png)
 
 ## Try this app now
-link: https://drive.google.com/file/d/11d43sy8x1iC5qaducFtienb7eU6pEZmC/view?usp=sharing
+link: https://drive.google.com/file/d/1xZ1c2w92DzNNgqmy7rO4i1u42lTvZSW3/view?usp=sharing
