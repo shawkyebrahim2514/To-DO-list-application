@@ -6,17 +6,27 @@
  > All notes are stored as HTML in txt file
 ```
 
-## Empty Notes
-![image](https://user-images.githubusercontent.com/101745968/171966883-3feef4c7-aa4c-4796-85dd-0f409808f575.png)
+
+> Features
+```
+  add new notes as you want
+  delete any notes
+  change note title
+  save note text changing
+  edit text tools
+  change text alignment
+  change font style
+  change font color
+```
+
+## Interface
+![image](https://user-images.githubusercontent.com/101745968/173247322-91a0d766-9ef3-47ff-ba1a-329c501e11a6.png)
 
 ## Create some notes!
-![image](https://user-images.githubusercontent.com/101745968/171967339-a0b4aed7-ceb1-408f-a538-96fc0544d585.png)
+![image](https://user-images.githubusercontent.com/101745968/173247298-b6da3aa5-034a-4d59-900f-02cb5433f8aa.png)
 
 ## Customize text!
-![image](https://user-images.githubusercontent.com/101745968/171967503-d7d42e49-92fa-444b-86dd-59e60c3a1183.png)
-
-## Customize text font!
-![image](https://user-images.githubusercontent.com/101745968/171967585-3360859d-257c-4eb5-aca5-e61b63a0aee6.png)
+![image](https://user-images.githubusercontent.com/101745968/173247339-a4bbf3a4-f676-4054-8df5-cb7b9ecfad9d.png)
 
 ## Try this app now
 link: https://drive.google.com/file/d/1xZ1c2w92DzNNgqmy7rO4i1u42lTvZSW3/view?usp=sharing
